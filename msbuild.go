@@ -10,7 +10,7 @@ import (
 )
 
 var (
-  UUIDSPACE string = "afbc4ff0-0c77-4542-ada7-276a20a856e2"
+  UUIDSPACE string = "10758f2f-f8bc-4d6b-aeaa-8131bf78a862" // Your UUID Space Here
 )
 
 type TemplateCallback func(element *Element)
