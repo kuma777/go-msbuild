@@ -218,18 +218,19 @@ func exportFilter(files []string, outpath string) {
 
     ext := filepath.Ext(file)
     name := ""
+    tag := ""
     if ext == ".h" {
       name = filepath.Join("Header Files", dir)
+      tag = "ClInclude"
     } else {
       name = filepath.Join("Source Files", dir)
+      tag = "ClCompile"
     }
 
-    {
-      child := elmEntries.AddChild("ClCompile")
-      child.AddAttribute("Include", file)
-      filter := child.AddChild("Filter")
-      filter.AddCharData(name)
-    }
+    child := elmEntries.AddChild(tag)
+    child.AddAttribute("Include", file)
+    filter := child.AddChild("Filter")
+    filter.AddCharData(name)
 
     path := name
     for {
