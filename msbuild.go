@@ -6,7 +6,7 @@ import (
   "os"
   "path/filepath"
   "github.com/google/uuid"
-  "./xml"
+  "github.com/kuma777/go-msbuild/xml"
 )
 
 var (
